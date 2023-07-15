@@ -32,7 +32,7 @@ export default function Signup() {
 
       const response = await axios.post("/api/users/signup", user)
       console.log(response);
-      router.push(`/profile/${user.email}`)
+      router.push(`/profile/${user.username}`)
 
     } catch (error: any) {
       console.error(error);
