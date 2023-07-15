@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import axios from "axios"
 import { useRouter } from "next/navigation";
+import { toast } from "react-hot-toast";
 
 export default function Login() {
 
@@ -28,10 +29,11 @@ export default function Login() {
       setLoading(true)
       const response = await axios.post("/api/users/login", user)
       console.log(response);
-
+      toast.success("Login successful");
       router.push(`/profile`)
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
+      toast.error(error.response.data.error)
     } finally {
       setLoading(false)
     }

@@ -4,6 +4,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import { toast } from "react-hot-toast"
 
 export default function Signup() {
   const router = useRouter()
@@ -32,10 +33,12 @@ export default function Signup() {
 
       const response = await axios.post("/api/users/signup", user)
       console.log(response);
+      toast.success("User successfully created")
       router.push(`/profile/${user.username}`)
 
     } catch (error: any) {
       console.error(error);
+      toast.error(error.response.data.error)
     } finally {
       setLoading(false)
     }
