@@ -31,7 +31,7 @@ export const config = {
   matcher: [
     '/',
     '/profile',
-    // '/profile/:id*',
+    '/profile/:path*',
     '/login',
     '/signup',
     '/logout',

@@ -20,7 +20,7 @@ export default function UserProfile({ params }: any) {
   }
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <h1>User Details</h1>
       <h1>{params.id}</h1>
       <hr />
