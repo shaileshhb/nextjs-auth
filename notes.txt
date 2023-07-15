@@ -1,0 +1,3 @@
+username - nextjstutorial
+password - SE0RPGOKColXwq5k
+mongodb+srv://nextjstutorial:<password>@nextjs-tutorial.li7xrge.mongodb.net/
