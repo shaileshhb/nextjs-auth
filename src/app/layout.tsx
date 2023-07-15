@@ -24,14 +24,14 @@ export default function RootLayout({
           duration: 2000,
           success: {
             style: {
-              background: 'green',
-              color: 'white',
+              background: '#C3EDC0',
+              color: '#285430',
             },
           },
           error: {
             style: {
-              background: 'red',
-              color: 'white',
+              background: '#F8C4B4',
+              color: '#FE0000',
             },
           },
         }} />
