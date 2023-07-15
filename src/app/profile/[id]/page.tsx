@@ -2,6 +2,7 @@
 import axios from "axios"
 import { useRouter } from "next/navigation"
 import { toast } from "react-hot-toast"
+import { useEffect, useState } from "react"
 
 export default function UserProfile({ params }: any) {
 
